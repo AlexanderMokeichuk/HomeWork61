@@ -1,0 +1,22 @@
+.blockContent {
+  width: 1100px;
+  height: 900px;
+  opacity: 0.8;
+  transition: 3s;
+}
+.blockContent:hover {
+  opacity: 1;
+  transition: 0.5s;
+
+}
+.blockCountries::-webkit-scrollbar {
+  width: 10px;
+}
+.blockCountries::-webkit-scrollbar-track {
+  margin-top: 4px;
+}
+.blockCountries::-webkit-scrollbar-thumb {
+  margin: 10px;
+  background-color: #4d9ed3;
+  border-radius: 50px;
+}

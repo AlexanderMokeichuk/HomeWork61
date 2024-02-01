@@ -1,0 +1,9 @@
+.alertCountry {
+  cursor: pointer;
+}
+.alertCountry:hover {
+  border: 1px solid #FFF;
+}
+.alertCountry:active {
+  border: 1px solid;
+}

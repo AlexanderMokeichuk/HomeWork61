@@ -1,3 +1,5 @@
 body {
-  background: rgb(64, 64 ,64);
+  background-image: url("./assets/WorldMap.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
