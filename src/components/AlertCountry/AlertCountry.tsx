@@ -1,15 +1,17 @@
 import React from "react";
-import {Country} from "../../type";
+import {Countries} from "../../type";
 import "./AlertCountry.css";
 
 interface Props {
-  country: Country;
+  country: Countries;
+  showCountry: (alpha3Code: string) => void;
 }
 
-const AlertCountry: React.FC<Props> = React.memo(({country}) => {
+const AlertCountry: React.FC<Props> = React.memo(({country, showCountry}) => {
+
 
   return (
-    <span className={"alertCountry alert alert-info w-100 p-2 m-0 link-info"}>
+    <span className={"alertCountry alert alert-info w-100 p-2 m-0 link-info"} onClick={() => showCountry(country.alpha3Code)}>
       {country.name}
     </span>
   );
