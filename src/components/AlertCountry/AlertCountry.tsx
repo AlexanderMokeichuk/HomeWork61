@@ -9,9 +9,11 @@ interface Props {
 
 const AlertCountry: React.FC<Props> = React.memo(({country, showCountry}) => {
 
-
   return (
-    <span className={"alertCountry alert alert-info w-100 p-2 m-0 link-info"} onClick={() => showCountry(country.alpha3Code)}>
+    <span
+      className={"alertCountry alert alert-info w-100 p-2 m-0 link-info"}
+      onClick={() => showCountry(country.alpha3Code)}
+    >
       {country.name}
     </span>
   );

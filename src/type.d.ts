@@ -29,3 +29,8 @@ export interface Country {
   name: string;
   population: number;
 }
+
+export interface Borders {
+  name: string;
+  flag: string
+}

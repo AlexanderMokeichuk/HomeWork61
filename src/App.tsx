@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import "./App.css";
-import React, {useCallback, useEffect, useState} from "react";
+import {useCallback, useEffect, useState} from "react";
 import {Countries, Country, ReceivedCountries} from "./type";
 import AlertCountry from "./components/AlertCountry/AlertCountry";
 import {GET_ALL_COUNTRY, GET_ONE_COUNTRY} from "./constants";
@@ -10,7 +10,7 @@ import AboutCountry from "./components/AboutCountry/AboutCountry";
 
 function App() {
   const [countries, setCountries] = useState<Countries[]>([]);
-  const [aboutCountry, setAboutCountry] = useState<Country | null>(null)
+  const [aboutCountry, setAboutCountry] = useState<Country | null>(null);
 
   const fetchData = useCallback(async () => {
     const {data: countries} = await axios.get<ReceivedCountries[]>(GET_ALL_COUNTRY);
@@ -42,7 +42,7 @@ function App() {
       languages: country.languages,
       name: country.name,
       population: country.population
-    })
+    });
   }, []);
 
   return (
@@ -66,6 +66,6 @@ function App() {
       </div>
     </div>
   );
-};
+}
 
-export default  App;
+export default App;
